@@ -11,6 +11,11 @@ The analysis includes:
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+## Power BI Interactive Dashboard
+
+View the interactive dashboard online: [Credit Churn Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWY5OGQzM2ItZjlkNy00MTYxLTlkYWItOTBlM2EyNmU5MGZjIiwidCI6ImMyMzNjMDcyLTEzNWItNDMxZC1hZjU5LTM1ZTA1YmFiZjk0MSIsImMiOjh9)
+
+
 
 ## Dataset Content
 The dataset used in this project is the BankChurners.csv dataset from Kaggle:
@@ -46,6 +51,9 @@ There is no statistically significant difference in tenure between customers who
 * Rationale:
 Customer tenure reflects relationship strength and engagement with the bank. Customers in the early stages of their lifecycle may not yet be fully integrated into the bank’s ecosystem, increasing their likelihood of attrition. Identifying this relationship allows the bank to improve onboarding and early retention strategies.
 
+* What I discovered:
+Customers with longer tenure (measured by Months_on_book) are more likely to churn compared to customers with shorter tenure. Opposite of my research hypothesis.
+
 ### H2: Credit Utilisation and Churn
 
 * Research Hypothesis (H2):
@@ -56,6 +64,9 @@ There is no statistically significant relationship between credit utilisation ra
 
 * Rationale:
 Credit utilisation (calculated as Total_Revolving_Bal divided by Credit_Limit) measures the proportion of available credit being used. High utilisation may indicate financial stress or dependency on credit, meaning, their reliance on credit is much more needed hence they cannot break out of the borrowing-repaying-borrowing cycle. 
+
+* What I discovered:
+The visual supports the hypothesis that customers with lower credit utilization ratios are more likely to churn than customers with higher utilization ratios. This suggests that low credit usage may signal disengagement, making those customers strong candidates for targeted retention strategies.
 
 ### H3: Income Category and Churn
 
@@ -68,6 +79,8 @@ There is no association between income category and customer churn.
 * Rationale:
 Income level may influence spending behaviour, credit dependency, and financial stability. Identifying income-based churn patterns allows the bank to design targeted retention campaigns tailored to different economic segments.
 
+* What I discovered:
+EDA confirms the hypothesis that churn rates differ across income categories. Lower-income customers are more likely to churn, while mid-income customers are the most stable. These insights can guide targeted retention strategies and personalized engagement for at-risk income segments.
 
 ## Project Plan
 ###High-level Steps:
@@ -133,32 +146,23 @@ Finally, an interactive dashboard in Power BI was created to allow stakeholders 
 Descriptive Statistics: 
 * Mean 
 * Median
-* Standard deviation
 * Percentiles
 
 Visualisations: 
 
-* Histograms
-* Boxplots
-* Scatterplots
+* Line charts
+* lollipop charts
 * Bar charts 
 * Heatmaps
 
-Hypothesis Testing:
 
-* Chi-square for categorical associations (e.g., income vs churn).
-* T-tests for continuous variables (e.g., tenure, credit utilisation).
 
 Machine Learning Models:
 
-* Logistic Regression, Random Forest, Decision Tree (classification).
+* Logistic Regression
 
 Evaluation metrics: Confusion matrix, F1-score, ROC-AUC.
 
-Limitations & Alternatives:
-
-* Imbalanced data handled with class weighting / SMOTE.
-* Outliers and skewed distributions addressed with log transformation or winsorisation.
 
 Generative AI Usage:
 * Assisted with code snippets, visualisation templates, hypothesis ideas, and dashboard design.
@@ -177,56 +181,26 @@ Transparency in model evaluation to avoid unfair bias.
 
 #### 1. Overview Page:
 
-* Total customers, churn rate, average credit limit.
-* KPI cards with slicers for Gender, Income, Card Category.
+* Total customers, churn rate by gender, overall churn.
+* KPI cards with slicers for Gender, Income.
 
-#### 2. Demographics Page:
-* Churn by age, income, education.
-* Histograms, stacked bar charts.
+#### 2. Drivers of churn page:
+* Churn by tenure, utilisation, card category.
+* Stacked bar charts.
 
-#### 3. Credit Usage Page:
 
-* Credit utilisation ratio vs churn.
-* Boxplots and scatterplots.
-
-#### 4. Transaction Analysis Page:
-
-* Transaction patterns and churn correlation.
-* Time series / bar charts of Total_Trans_Amt.
-
-#### 5. Predictive Insights Page:
-
-* Input filters for age, income, tenure, relationships.
-* Display predicted churn probability using ML model.
-
-#### Communication Strategy:
-
-* KPIs for executives.
-* Detailed charts for analysts.
-* Clear legends, tooltips, and slicers for interactive exploration.
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* On powerBi i could not quite figure out how to fully format the visuals to my liking.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+* i experienced a lot of challenges with PowerBi. I had to go through the LMS again to refamilliarise myslef with the layout and then I used AI to help me manouvere the platform as well as help with structuring DAX formiulas to create new columns for charts.
 
-## Deployment
-### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+## Power BI Interactive Dashboard
+
+View the interactive dashboard online: [Credit Churn Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWY5OGQzM2ItZjlkNy00MTYxLTlkYWItOTBlM2EyNmU5MGZjIiwidCI6ImMyMzNjMDcyLTEzNWItNDMxZC1hZjU5LTM1ZTA1YmFiZjk0MSIsImMiOjh9)
 
 
 ## Main Data Analysis Libraries
@@ -246,17 +220,6 @@ Transparency in model evaluation to avoid unfair bias.
 * BankChurners dataset: Kaggle
 * Code snippets from Scikit-learn and Seaborn documentation
 * Dashboard design inspiration from Power BI online tutorials
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
 
 
 

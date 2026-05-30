@@ -38,9 +38,36 @@ I am a contracted a Business Analyst for the credit card company and my job is t
 * Predict churn probabilities to support decision-making for targeted campaigns.
 * Provide interactive dashboards for business stakeholders to explore customer trends dynamically.
 
+# LO1: Statistical, Probability and Data Analysis Principles
+
+## 1.1 Core Principles of Statistics, Probability and Data Analysis
+
+### Statistics
+
+Statistics is the science of collecting, organising, analysing and interpreting data. In this project, statistical methods are used to identify trends, measure performance and support data-driven business decisions. Descriptive statistics such as mean, median, standard deviation and frequency distributions help summarise customer behaviour and business performance.
+
+### Probability
+
+Probability measures the likelihood of an event occurring. It provides a framework for dealing with uncertainty and is fundamental to predictive analytics and machine learning. In this project, probability concepts support the interpretation of model predictions and the evaluation of patterns within the dataset.
+
+### Data Analysis
+
+Data analysis involves inspecting, cleaning, transforming and modelling data to discover useful information. The ETL process implemented in this project ensures data quality before analysis. Exploratory Data Analysis (EDA) is used to identify patterns, trends and relationships, while machine learning models are applied to generate actionable business insights.
+
+### Importance to This Project
+
+These principles form the foundation of the project because they enable:
+
+* Accurate interpretation of customer and business data.
+* Evidence-based decision making.
+* Validation of assumptions through statistical testing.
+* Reliable predictive modelling and performance evaluation.
+* Identification of meaningful trends and patterns within the dataset.
+
 
 ## Hypothesis and how to validate?
 ### H1: Customer Tenure and Churn
+
 
 * Research Hypothesis (H1):
 Customers with shorter tenure (measured by Months_on_book) are more likely to churn compared to customers with longer tenure.
@@ -166,6 +193,12 @@ Evaluation metrics: Confusion matrix, F1-score, ROC-AUC.
 
 Generative AI Usage:
 * Assisted with code snippets, visualisation templates, hypothesis ideas, and dashboard design.
+
+## Legal and Ethical Considerations
+
+This project considers relevant data protection and privacy regulations, particularly the General Data Protection Regulation (GDPR). Any customer data used for analysis should be collected lawfully, processed transparently and stored securely. Personally identifiable information (PII) should be anonymised or removed where possible. Access to data should be restricted to authorised users, and data should only be retained for as long as necessary for the intended analytical purpose.
+
+The project is intended for educational and analytical purposes and demonstrates responsible data handling practices consistent with modern data governance standards.
 
 ## Ethical considerations
 * Data is anonymised; no personal identifiers are exposed. 
